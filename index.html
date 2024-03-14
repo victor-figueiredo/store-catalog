@@ -9,20 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 </head>
 <body>
     <!-- HEADER -->
-    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+    <header class="w-full h-[320px] bg-zinc-900 bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
             <img src="./assets/images/logo-nobg.png" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200 bg-[#FECAF1]" alt="">
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Amour Propre Lingerie</h1>    
-            <span class="text-white font-medium">Cordeiro, Recife</span>
+            <h1 class="sm:text-4xl text-3xl mt-4 mb-2 font-bold text-white bg-[#3E2337] bg-opacity-40 backdrop-blur-sm p-2 shadow-lg rounded-md">Amour Propre Lingerie</h1>    
+            <span class="text-white font-medium px-2 bg-[#3E2337] bg-opacity-40 backdrop-blur-sm rounded-md">Cordeiro, Recife</span>
 
-            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+            <!-- <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
                 <span class="text-white font-medium">
                     Seg á Dom - 08:00 as 20:00
                 </span>
-            </div>
+            </div> -->
         </div>
     </header>
     <!-- FIM DO HEADER -->
@@ -32,83 +33,7 @@
 
     <!-- INÍCIO DO CATÁLOGO -->
     <div id="menu">
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
-            <!-- PRODUTO ITEM -->
-            <div class="flex gap-2">
-                <img src="./assets/images/products/p1.jpeg" alt="Conjunto Delicada" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
-                <div>
-                    <p class="font-bold">Conjunto Delicada</p>
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 18,90</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Conjunto Delicada"
-                            data-price="59.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>    
-            </div>
-            <!-- FIM PRODUTO ITEM -->
-            <!-- PRODUTO ITEM -->
-            <div class="flex gap-2">
-                <img src="./assets/images/products/p2.jpeg" alt="Conjunto 2" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
-                <div>
-                    <p class="font-bold">Conjunto 2</p>
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 39,99</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Conjunto Delicada"
-                            data-price="39.99"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>    
-            </div>
-            <!-- FIM PRODUTO ITEM -->
-            <!-- PRODUTO ITEM -->
-            <div class="flex gap-2">
-                <img src="./assets/images/products/p3.jpeg" alt="Conjunto Delicada" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
-                <div>
-                    <p class="font-bold">Conjunto 3</p>
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 69,90</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Conjunto 3"
-                            data-price="69.90"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>    
-            </div>
-            <!-- FIM PRODUTO ITEM -->
-            <!-- PRODUTO ITEM -->
-            <div class="flex gap-2">
-                <img src="./assets/images/products/p4.jpeg" alt="Conjunto Delicada" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
-                <div>
-                    <p class="font-bold">Conjunto 4</p>
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 69,90</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Conjunto 4"
-                            data-price="69.90"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>    
-            </div>
-            <!-- FIM PRODUTO ITEM -->
+        <main id="products-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
         </main>
 
         <div class="mx-auto max-w-7xl px-2 my-2">
@@ -118,52 +43,14 @@
         </div>
 
         <!-- GRID PEÇAS IND -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
-            <!-- PRODUTO IND ITEM -->
-            <div class="flex gap-2 w-full">
-                <img src="./assets/images/products/pi1.jpeg" alt="Calcinha Butterfly" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
-                <div class="w-full">
-                    <p class="font-bold">Calcinha Butterfly</p>
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 19,90</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Calcinha Butterfly"
-                            data-price="19.90"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>    
-            </div>
-            <!-- FIM PRODUTO IND ITEM -->
-            <!-- PRODUTO IND ITEM -->
-            <div class="flex gap-2 w-full">
-                <img src="./assets/images/products/pi1.jpeg" alt="Calcinha Butterfly" class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
-                <div class="w-full">
-                    <p class="font-bold">Calcinha Butterfly 2</p>
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 19,90</p>
-                        <button 
-                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Calcinha Butterfly 2"
-                            data-price="19.90"
-                        >
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>    
-            </div>
-            <!-- FIM PRODUTO IND ITEM -->
+        <div id="container-individuals-products" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
         </div>
         <!-- FIM GRID PEÇAS IND -->
     </div>
     <!-- FIM DO CATÁLOGO -->
 
     <!-- MODAL CART -->
-    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+    <div id="cart-modal" class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
 
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
@@ -186,17 +73,18 @@
     <!-- FIM MODAL CART -->
 
     <!-- BUTTON CART FOOTER -->
-    <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+    <footer class="w-full bg-[#3E2337] py-2 fixed bottom-0 z-40 flex items-center justify-center">
         <button 
             class="flex items-center gap-2 text-white font-bold"
             id="cart-btn"
         >
-            (<span id="cart-count">2</span>)
+            (<span id="cart-count">0</span>)
             Ver carrinho
             <i class="fa fa-cart-plus text-lg text-white"></i>
         </button>
     </footer>
     <!-- FIM BUTTON CART FOOTER -->
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
