@@ -13,31 +13,31 @@ const cart = []
 
 const products = [
     {
-        name: "Conjunto Rubi",
+        name: "Conjunto-Rubi",
         imageUrl: "./assets/images/products/p1.jpeg",
         size: "M",
         price: 79.90
     },
     {
-        name: "Conjunto Cinderela",
+        name: "Conjunto-Cinderela",
         imageUrl: "./assets/images/products/p2.jpeg",
         size: "P e M",
         price: 51.90
     },
     {
-        name: "Santa Passion",
+        name: "Santa-Passion",
         imageUrl: "./assets/images/products/p3.jpeg",
         size: "P",
         price: 59.90
     },
     {
-        name: "Conjunto Delicada",
+        name: "Conjunto-Delicada",
         imageUrl: "./assets/images/products/p4.jpeg",
         size: "P",
         price: 83.90
     },
     {
-        name: "Baby doll",
+        name: "Baby-doll",
         imageUrl: "./assets/images/products/p5.jpeg",
         size: "P e M",
         price: 44.90
@@ -56,27 +56,27 @@ function renderProducts() {
 
         productElement.innerHTML = `
         <div class="flex gap-2">
-        <a href=${product.imageUrl} target="_blank">
-        <img src=${product.imageUrl} alt=${product.name} class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
-        </a>
-        <div class="w-[100%]">
-            <p class="font-bold">${product.name}</p>
-            <p class="text-sm">Tamanhos: ${product.size}.</p>
-            <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">${product.price.toLocaleString("pt-BR", {
-                    style: "currency",
-                    currency: "BRL"
-                })}</p>
-                <button 
-                    class="bg-[#3E2337] px-5 rounded add-to-cart-btn"
-                    data-name=${product.name}
-                    data-price=${product.price}
-                >
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
+            <a href=${product.imageUrl} target="_blank">
+                <img src=${product.imageUrl} alt=${product.name} class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+            </a>
+            <div class="w-[100%]">
+                <p class="font-bold">${product.name.replace("-", " ")}</p>
+                <p class="text-sm">Tamanhos: ${product.size}.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">${product.price.toLocaleString("pt-BR", {
+                            style: "currency",
+                            currency: "BRL"
+                        })}</p>
+                        <button 
+                            class="bg-[#3E2337] px-5 rounded add-to-cart-btn"
+                            data-name=${product.name}
+                            data-price=${product.price}
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>    
             </div>
-        </div>    
-    </div>
         `;
 
         productsContainer.appendChild(productElement);
@@ -105,26 +105,26 @@ function renderIndividualProducts() {
         productElement.innerHTML = `
         <div class="flex gap-2">
             <a href=${product.imageUrl} target="_blank">
-            <img src=${product.imageUrl} alt=${product.name} class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
+                <img src=${product.imageUrl} alt=${product.name} class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300">
             </a>
             <div class="w-[100%]">
-            <p class="font-bold">${product.name}</p>
-            <p class="text-sm">Tamanhos: ${product.size}.</p>
-            <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">${product.price.toLocaleString("pt-BR", {
-                    style: "currency",
-                    currency: "BRL"
-                })}</p>
-                <button 
-                    class="bg-[#3E2337] px-5 rounded add-to-cart-btn"
-                    data-name=${product.name}
-                    data-price=${product.price}
-                >
-                    <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
-            </div>
-        </div>    
-    </div>
+                <p class="font-bold">${product.name.replace("-", " ")}</p>
+                <p class="text-sm">Tamanhos: ${product.size}.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">${product.price.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL"
+                    })}</p>
+                    <button 
+                        class="bg-[#3E2337] px-5 rounded add-to-cart-btn"
+                        data-name=${product.name}
+                        data-price=${product.price}
+                    >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>    
+        </div>
         `;
 
         productsContainer.appendChild(productElement);
